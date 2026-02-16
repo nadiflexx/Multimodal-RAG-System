@@ -7,7 +7,7 @@ where = ["."]
 include = ["rag*"]
 
 [project]
-name = "rag-exercise"
+name = "multimodal-rag-system"
 version = "0.1.0"
 description = "RAG System with Hybrid Retrieval, HyDE, Semantic Cache and Streamlit UI"
 readme = "README.md"

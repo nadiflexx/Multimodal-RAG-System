@@ -98,7 +98,17 @@ Run Retrieval Evaluation
     uv run evaluate.py
 ```
 
-📂 Project Structure
+### 5. Documentation
+
+Detailed documentation available in docs/:
+
+```bash
+    mkdocs serve
+```
+
+Should be displayed on: http://127.0.0.1:8000/
+
+### 📂 Project Structure
 
 ```text
 src/
