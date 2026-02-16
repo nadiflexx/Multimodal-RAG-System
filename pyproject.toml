@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rag*"]
+
+[project]
+name = "rag-exercise"
+version = "0.1.0"
+description = "RAG System with Hybrid Retrieval, HyDE, Semantic Cache and Streamlit UI"
+readme = "README.md"
+authors = [{ name = "Nadeem", email = "alu2019213@365.stucom.com" }]
+
+maintainers = [{ name = "Nadeem", email = "alu2019213@365.stucom.com" }]
+requires-python = ">=3.11"
+dependencies = [
+    "chromadb>=1.4.1",
+    "cryptography>=46.0.4",
+    "flashrank>=0.2.10",
+    "langchain>=1.2.8",
+    "langchain-chroma>=1.1.0",
+    "langchain-community>=0.4.1",
+    "langchain-groq>=1.1.2",
+    "langchain-openai>=1.1.7",
+    "langchain-experimental>=0.4.1",
+    "langfuse>=3.12.1",
+    "langsmith>=0.6.8",
+    "loguru>=0.7.3",
+    "pydantic-settings>=2.12.0",
+    "pypdf>=6.6.2",
+    "python-dotenv>=1.2.1",
+    "ragas>=0.4.3",
+    "rank-bm25>=0.2.2",
+    "sentence-transformers>=5.2.2",
+    "torch",
+    "streamlit>=1.37.0",
+    "watchdog>=4.0.0",
+    "mkdocs-material>=9.7.1",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.5.3", "pytest>=8.3.4", "pytest-cov"]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+exclude = [".git", ".venv", "build", "dist", "__init__.py"]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

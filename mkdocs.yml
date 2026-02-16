@@ -1,0 +1,49 @@
+site_name: RAG System Documentation
+site_description: Guía completa de arquitectura y flujo (RAG)
+site_author: Your Team
+repo_name: Project Repo
+# repo_url: https://github.com/your-org/your-repo
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Inicio: index.md
+  - Guía:
+      - 1. Qué es RAG y por qué existe: 01-que-es-rag.md
+      - 2. Arquitectura del sistema: 02-arquitectura.md
+      - 3. Fase 1 — Ingestion: 03-ingestion.md
+      - 4. Fase 2 — Retrieval: 04-retrieval.md
+      - 5. Fase 3 — Generation: 05-generation.md
+      - 6. Sistemas auxiliares: 06-sistemas-auxiliares.md
+      - 7. Dificultades y soluciones: 07-dificultades-y-soluciones.md
+      - 8. Técnicas avanzadas: 08-tecnicas-avanzadas.md
+      - 9. Decisiones de diseño: 09-decisiones-diseno.md
+      - 10. Flujo final completo: 10-flujo-final.md

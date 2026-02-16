@@ -1,0 +1,110 @@
+# ============================================
+#  ENTORNOS VIRTUALES
+# ============================================
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+
+# ============================================
+#  ARCHIVOS DE CONFIGURACIÓN SENSIBLES
+# ============================================
+.env
+.env.*
+*.env
+
+# ============================================
+#  CREDENCIALES API Y GOOGLE
+# ============================================
+token.json
+credentials.json
+client_secrets.json
+
+# ============================================
+#  TESTING Y COVERAGE
+# ============================================
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+.tox/
+nosetests.xml
+
+# ============================================
+#  LOGS
+# ============================================
+*.log
+logs/
+
+# ============================================
+#  RAG SPECIFIC (CACHE & DB)
+# ============================================
+# Base de datos vectorial (ChromaDB)
+chroma_db/
+data/chroma_db/
+
+# Modelos descargados localmente (FlashRank/HuggingFace)
+models_cache/
+.cache/
+
+# Cache semántico (JSON)
+cache/
+data/cache/
+
+# ============================================
+#  DATOS (CONTROL FINO)
+# ============================================
+
+# Ignorar todo el contenido de data/ por defecto (PDFs subidos, etc)
+data/*
+
+# ¡IMPORTANTE! Si quieres subir un PDF de ejemplo (como data.pdf)
+# descomenta la siguiente línea:
+ !data/evaluation.pdf
+
+# ============================================
+#  ARCHIVOS DE DATOS GENÉRICOS
+# ============================================
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.pdf
+
+# ============================================
+#  CACHE Y TEMPORALES PYTHON
+# ============================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# ============================================
+#  STREAMLIT
+# ============================================
+.streamlit/
+
+# ============================================
+#  CONFIGURACIÓN DE EDITORES
+# ============================================
+.vscode/
+.idea/
+*.iml
+
+# ============================================
+#  BUILD / DIST
+# ============================================
+dist/
+build/
+*.spec
+
+# ============================================
+#  SISTEMA
+# ============================================
+.DS_Store
+Thumbs.db
+*.bak
+*.old
